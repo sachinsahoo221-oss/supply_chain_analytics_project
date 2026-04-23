@@ -411,8 +411,6 @@ ORDER BY consecutive_bad_months DESC;
  
  --- Top 3 products in each city with highest delays
 
- 
- 
  with city_delay as
 (select o.city, o.product_id, count(*) total_orders,
 round(avg(datediff(s.actual_delivery,s.expected_delivery)),2) as highest_delays
